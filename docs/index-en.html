@@ -1,0 +1,2246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Ontología de Turismo Inteligente y Recomendaciones</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2","name":"Ontología de Turismo Inteligente y Recomendaciones", "headline":"Document describing the ontology http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2", "dateReleased":"25/04/2025", "dateModified":"28/04/2025", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"José Andrés Filgueira Sánchez"}], "contributor":[{"@type":"Person","name":"Andrés Filgueira"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> <a href="index-es.html"><b>es</b></a> </div>
+<h1>Ontología de Turismo Inteligente y Recomendaciones</h1>
+<h2>Release: 25/04/2025</h2>
+
+
+<dl>
+<dt>Modified on: 28/04/2025</dt>
+<dt>This version:</dt>
+<dd><a href="1.1">1.1</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2">http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2</a></dd>
+<dt>Authors:</dt>
+<dd>José Andrés Filgueira Sánchez</dd>
+
+<dt>Contributors:</dt>
+<dd>Andrés Filgueira<a href="mailto:andrazer@gmail.com">&#9993;</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">El propósito de la OTIR es proporcionar una estructura semántica formal y compartida del dominio del turismo inteligente lo que permitirá organizar y estructurar la información turística para recomendar a los usuarios eventos, alojamientos, atracciones y restaurantes según su ubicación e intereses, estructurar los datos turísticos para la mejora de la interoperabilidad de sistemas y facilitar la integración con otras ontologías y fuentes de datos enlazadas.</span>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Ontología de Turismo Inteligente y Recomendaciones (OTIR).: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#/Attraction"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction">"Atracción"@es</a>
+   </li>
+   <li>
+      <a href="#/PopularAttraction"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/PopularAttraction">"AtracciónPopular" @es</a>
+   </li>
+   <li>
+      <a href="#/Bus"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Bus">"Autobus" @es</a>
+   </li>
+   <li>
+      <a href="#/Bike"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Bike">"Bicicleta" @es</a>
+   </li>
+   <li>
+      <a href="#/Carnival"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Carnival">"Carnaval" @es</a>
+   </li>
+   <li>
+      <a href="#/Castle"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Castle">"Castillo" @es</a>
+   </li>
+   <li>
+      <a href="#/Cathedral"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Cathedral">"Catedral" @es</a>
+   </li>
+   <li>
+      <a href="#/City"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City">"Ciudad"@es</a>
+   </li>
+   <li>
+      <a href="#/Concert"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Concert">"Concierto" @es</a>
+   </li>
+   <li>
+      <a href="#/Congress"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Congress">"Congreso" @es</a>
+   </li>
+   <li>
+      <a href="#/Event"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event">"Evento"@es</a>
+   </li>
+   <li>
+      <a href="#/Fair"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Fair">"Feria" @es</a>
+   </li>
+   <li>
+      <a href="#/Festival"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Festival">"Festival" @es</a>
+   </li>
+   <li>
+      <a href="#/Hotel"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel">"Hotel" @es</a>
+   </li>
+   <li>
+      <a href="#/ExpensiveHotel"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/ExpensiveHotel">"HotelCaro" @es</a>
+   </li>
+   <li>
+      <a href="#/Metro"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Metro">"Metro" @es</a>
+   </li>
+   <li>
+      <a href="#/Museum"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Museum">"Museo" @es</a>
+   </li>
+   <li>
+      <a href="#/Palace"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Palace">"Palacio" @es</a>
+   </li>
+   <li>
+      <a href="#/Park"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Park">"Parque" @es</a>
+   </li>
+   <li>
+      <a href="#/Restaurant"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant">"Restaurante" @es</a>
+   </li>
+   <li>
+      <a href="#/RecomendedRestaurant"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/RecomendedRestaurant">"RestauranteRecomendado" @es</a>
+   </li>
+   <li>
+      <a href="#/Taxi"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Taxi">"Taxi" @es</a>
+   </li>
+   <li>
+      <a href="#/Transportation"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation">"Transport"@es</a>
+   </li>
+   <li>
+      <a href="#/Tram"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Tram">"Tranvía" @es</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#/city"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/city">"Ciudad" @es</a>
+   </li>
+   <li>
+      <a href="#/hasAttraction"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasAttraction">"tieneAtraccion" @es</a>
+   </li>
+   <li>
+      <a href="#/hasEvent"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasEvent">"tieneEvento" @es</a>
+   </li>
+   <li>
+      <a href="#/hasHotel"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasHotel">"tieneHotel" @es</a>
+   </li>
+   <li>
+      <a href="#/hasRestaurant"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasRestaurant">"tieneRestaurante" @es</a>
+   </li>
+   <li>
+      <a href="#/hasTransportation"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasTransportation">"tieneTransporte" @es</a>
+   </li>
+   <li>
+      <a href="#/locatedIn"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#/attractionId"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionId">"AtracciónId" @es</a>
+   </li>
+   <li>
+      <a href="#/attractionName"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionName">"AtracciónNombre" @es</a>
+   </li>
+   <li>
+      <a href="#/cityId"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/cityId">"CiudadId" @es</a>
+   </li>
+   <li>
+      <a href="#cityLocation"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2#cityLocation">"CiudadLocalizacion" @es</a>
+   </li>
+   <li>
+      <a href="#cityName"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2#cityName">"CiudadNombre" @es</a>
+   </li>
+   <li>
+      <a href="#/transportationCompany"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationCompany">"CompañiaTransporte" @es</a>
+   </li>
+   <li>
+      <a href="#/transportationCost"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationCost">"CosteTransporte" @es</a>
+   </li>
+   <li>
+      <a href="#/hotelStars"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelStars">"estrellasHotel" @es</a>
+   </li>
+   <li>
+      <a href="#/evenDate"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/evenDate">"FechaEvento" @es</a>
+   </li>
+   <li>
+      <a href="#/eventId"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/eventId">"IdEvento" @es</a>
+   </li>
+   <li>
+      <a href="#/hotelId"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelId">"idHotel" @es</a>
+   </li>
+   <li>
+      <a href="#/restaurantId"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantId">"idRestaurante" @es</a>
+   </li>
+   <li>
+      <a href="#/transportationId"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationId">"idTransporte" @es</a>
+   </li>
+   <li>
+      <a href="#/eventName"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/eventName">"NombreEvento" @es</a>
+   </li>
+   <li>
+      <a href="#/hotelName"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelName">"nombreHotel" @es</a>
+   </li>
+   <li>
+      <a href="#/restaurantName"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantName">"nombreRestaurante" @es</a>
+   </li>
+   <li>
+      <a href="#/hotelPriceNight"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelPriceNight">"PrecioNoche" @es</a>
+   </li>
+   <li>
+      <a href="#/restaurantAveragePrice"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantAveragePrice">"precioRestaurante" @es</a>
+   </li>
+   <li>
+      <a href="#/attractionRating"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionRating">"PuntuacionAtraccion" @es</a>
+   </li>
+   <li>
+      <a href="#/hotelRating"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelRating">"PuntuacionHotel" @es</a>
+   </li>
+   <li>
+      <a href="#/restaurantRating"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantRating">"PuntuaciónRestaurante" @es</a>
+   </li>
+   <li>
+      <a href="#/attractionType"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionType">"Tipo de atracción" @es</a>
+   </li>
+   <li>
+      <a href="#/restaurantCuisina"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantCuisina">"tipoCocina" @es</a>
+   </li>
+   <li>
+      <a href="#/evenType"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/evenType">"tipoEvento" @es</a>
+   </li>
+   <li>
+      <a href="#/hotelType"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelType">"tipoHotel" @es</a>
+   </li>
+   <li>
+      <a href="#/transportationType"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationType">"tipoTransporte" @es</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/created" title="http://purl.org/dc/elements/1.1/created">
+         <span>created</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
+         title="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+         <span>is Rule Enabled</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2002/07/owl#sameAs" title="http://www.w3.org/2002/07/owl#sameAs">
+         <span>same As</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/title" title="http://purl.org/dc/elements/1.1/title">
+         <span>title</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2002/07/owl#versionInfo" title="http://www.w3.org/2002/07/owl#versionInfo">
+         <span>version Info</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#/Deportivo"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Deportivo">
+         <span>Deportivo</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/HotelDelMar"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/HotelDelMar">
+         <span>Hotel Del Mar</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hotelPalaceMadrid"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelPalaceMadrid">
+         <span>hotel Palace Madrid</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Madrid"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Madrid">
+         <span>Madrid</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Museo"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Museo">
+         <span>Museo</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/RestauranteJapones"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/RestauranteJapones">
+         <span>Restaurante Japones</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/RestauranteMexicano"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/RestauranteMexicano">
+         <span>Restaurante Mexicano</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Toledo"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Toledo">
+         <span>Toledo</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/TranviaToledo"
+         title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/TranviaToledo">
+         <span>Tranvia Toledo</span>
+      </a>
+   </li>
+</ul><h4> SWRL Rules </h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#d4e1508">ExpensiveHotel</a>
+   </li>
+   <li>
+      <a href="#d4e1385">PopularAttraction</a>
+   </li>
+   <li>
+      <a href="#d4e1630">RecomendedRestaurant</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Ontología de Turismo Inteligente y Recomendaciones (OTIR).: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">Esta ontología tiene como objeto modelar el conocimiento relacionado con el turismo inteligente, incluyendo eventos turísticos, oferta hotelera, atracciones turísticas y restaurantes en diferentes ciudades. Su propósito es estructurar la información para facilitar recomendaciones personalizadas a los turistas a través de la integración y consulta de datos turísticos para sistemas de recomendación y planificación de viajes.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Ontología de Turismo Inteligente y Recomendaciones (OTIR). classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Ontología de Turismo Inteligente y Recomendaciones (OTIR)..
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#/Attraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction">"Atracción"@es</a></li>
+  <li><a href="#/PopularAttraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/PopularAttraction">"AtracciónPopular" @es</a></li>
+  <li><a href="#/Bus" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Bus">"Autobus" @es</a></li>
+  <li><a href="#/Bike" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Bike">"Bicicleta" @es</a></li>
+  <li><a href="#/Carnival" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Carnival">"Carnaval" @es</a></li>
+  <li><a href="#/Castle" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Castle">"Castillo" @es</a></li>
+  <li><a href="#/Cathedral" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Cathedral">"Catedral" @es</a></li>
+  <li><a href="#/City" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City">"Ciudad"@es</a></li>
+  <li><a href="#/Concert" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Concert">"Concierto" @es</a></li>
+  <li><a href="#/Congress" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Congress">"Congreso" @es</a></li>
+  <li><a href="#/Event" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event">"Evento"@es</a></li>
+  <li><a href="#/Fair" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Fair">"Feria" @es</a></li>
+  <li><a href="#/Festival" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Festival">"Festival" @es</a></li>
+  <li><a href="#/Hotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel">"Hotel" @es</a></li>
+  <li><a href="#/ExpensiveHotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/ExpensiveHotel">"HotelCaro" @es</a></li>
+  <li><a href="#/Metro" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Metro">"Metro" @es</a></li>
+  <li><a href="#/Museum" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Museum">"Museo" @es</a></li>
+  <li><a href="#/Palace" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Palace">"Palacio" @es</a></li>
+  <li><a href="#/Park" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Park">"Parque" @es</a></li>
+  <li><a href="#/Restaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant">"Restaurante" @es</a></li>
+  <li><a href="#/RecomendedRestaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/RecomendedRestaurant">"RestauranteRecomendado" @es</a></li>
+  <li><a href="#/Taxi" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Taxi">"Taxi" @es</a></li>
+  <li><a href="#/Transportation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation">"Transport"@es</a></li>
+  <li><a href="#/Tram" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Tram">"Tranvía" @es</a></li>
+ </ul>
+ <div class="entity" id="/Attraction">
+  <h3>"Atracción"@es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction</p>
+  <div class="comment">
+   <span class="markdown">"Un lugar de interés que los turistas visitan." @es</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1 <a href="#/City" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City">"Ciudad"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/PopularAttraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/PopularAttraction">"AtracciónPopular" @es</a> <sup class="type-c" title="class">c</sup>, <a href="#/Castle" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Castle">"Castillo" @es</a> <sup class="type-c" title="class">c</sup>, <a href="#/Cathedral" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Cathedral">"Catedral" @es</a> <sup class="type-c" title="class">c</sup>, <a href="#/Museum" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Museum">"Museo" @es</a> <sup class="type-c" title="class">c</sup>, <a href="#/Palace" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Palace">"Palacio" @es</a> <sup class="type-c" title="class">c</sup>, <a href="#/Park" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Park">"Parque" @es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/attractionId" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionId">"AtracciónId" @es</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/attractionName" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionName">"AtracciónNombre" @es</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/city" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/city">"Ciudad" @es</a> <sup class="type-op" title="object property">op</sup>, <a href="#/attractionRating" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionRating">"PuntuacionAtraccion" @es</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/attractionType" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionType">"Tipo de atracción" @es</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/hasAttraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasAttraction">"tieneAtraccion" @es</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/Museo" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Museo">Museo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/PopularAttraction">
+  <h3>"AtracciónPopular" @es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/PopularAttraction</p>
+  <div class="comment">
+   <span class="markdown">"An attraction that has a popularity greater than 80." @en</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Attraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction">"Atracción"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Bus">
+  <h3>"Autobus" @es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Bus</p>
+  <div class="comment">
+   <span class="markdown">"Un vehículo de carretera grande que transporta a muchos pasajeros por ruta." @es</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Transportation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation">"Transport"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Bike">
+  <h3>"Bicicleta" @es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Bike</p>
+  <div class="comment">
+   <span class="markdown">"Un vehículo de dos ruedas impulsado por pedales." @es</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Transportation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation">"Transport"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Carnival">
+  <h3>"Carnaval" @es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Carnival</p>
+  <div class="comment">
+   <span class="markdown">"Un periodo de celebración pública que tiene lugar antes de la Cuaresma, típicamente con desfiles y disfraces." @es</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Event" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event">"Evento"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Castle">
+  <h3>"Castillo" @es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Castle</p>
+  <div class="comment">
+   <span class="markdown">"Una fortificación medieval, típicamente con muros altos y torres." @es</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Attraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction">"Atracción"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Cathedral">
+  <h3>"Catedral" @es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Cathedral</p>
+  <div class="comment">
+   <span class="markdown">"La iglesia principal de una diócesis, donde se encuentra la sede del obispo." @es</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Attraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction">"Atracción"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/City">
+  <h3>"Ciudad"@es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City</p>
+  <div class="comment">
+   <span class="markdown">"Un núcleo urbano grande y complejo."@es</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#/hasAttraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasAttraction">"tieneAtraccion" @es</a> <sup class="type-op" title="object property">op</sup> <span class="logic">min</span> 0 <a href="#/Attraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction">"Atracción"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#/hasEvent" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasEvent">"tieneEvento" @es</a> <sup class="type-op" title="object property">op</sup> <span class="logic">min</span> 0 <a href="#/Event" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event">"Evento"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#/hasHotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasHotel">"tieneHotel" @es</a> <sup class="type-op" title="object property">op</sup> <span class="logic">min</span> 0 <a href="#/Hotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel">"Hotel" @es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#/hasRestaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasRestaurant">"tieneRestaurante" @es</a> <sup class="type-op" title="object property">op</sup> <span class="logic">min</span> 0 <a href="#/Restaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant">"Restaurante" @es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#/hasTransportation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasTransportation">"tieneTransporte" @es</a> <sup class="type-op" title="object property">op</sup> <span class="logic">min</span> 0 <a href="#/Transportation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation">"Transport"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#/hasAttraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasAttraction">"tieneAtraccion" @es</a> <sup class="type-op" title="object property">op</sup> <span class="logic">max</span> 100000 <a href="#/Attraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction">"Atracción"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#/hasEvent" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasEvent">"tieneEvento" @es</a> <sup class="type-op" title="object property">op</sup> <span class="logic">max</span> 100000 <a href="#/Event" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event">"Evento"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#/hasHotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasHotel">"tieneHotel" @es</a> <sup class="type-op" title="object property">op</sup> <span class="logic">max</span> 100000 <a href="#/Hotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel">"Hotel" @es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#/hasRestaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasRestaurant">"tieneRestaurante" @es</a> <sup class="type-op" title="object property">op</sup> <span class="logic">max</span> 100000 <a href="#/Restaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant">"Restaurante" @es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#/hasTransportation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasTransportation">"tieneTransporte" @es</a> <sup class="type-op" title="object property">op</sup> <span class="logic">max</span> 100000 <a href="#/Transportation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation">"Transport"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/cityId" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/cityId">"CiudadId" @es</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#cityLocation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2#cityLocation">"CiudadLocalizacion" @es</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/hasAttraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasAttraction">"tieneAtraccion" @es</a> <sup class="type-op" title="object property">op</sup>, <a href="#/hasEvent" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasEvent">"tieneEvento" @es</a> <sup class="type-op" title="object property">op</sup>, <a href="#/hasHotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasHotel">"tieneHotel" @es</a> <sup class="type-op" title="object property">op</sup>, <a href="#/hasRestaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasRestaurant">"tieneRestaurante" @es</a> <sup class="type-op" title="object property">op</sup>, <a href="#/hasTransportation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasTransportation">"tieneTransporte" @es</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/city" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/city">"Ciudad" @es</a> <sup class="type-op" title="object property">op</sup>, <a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/Madrid" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Madrid">Madrid</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/Toledo" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Toledo">Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Concert">
+  <h3>"Concierto" @es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Concert</p>
+  <div class="comment">
+   <span class="markdown">"Una actuación musical en directo ante una audiencia." @es</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Event" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event">"Evento"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Congress">
+  <h3>"Congreso" @es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Congress</p>
+  <div class="comment">
+   <span class="markdown">"Una reunión formal de delegados o representantes para discutir asuntos específicos." @es</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Event" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event">"Evento"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Event">
+  <h3>"Evento"@es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event</p>
+  <div class="comment">
+   <span class="markdown">"Algo que importante que sucede."@es</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1 <a href="#/City" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City">"Ciudad"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/Carnival" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Carnival">"Carnaval" @es</a> <sup class="type-c" title="class">c</sup>, <a href="#/Concert" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Concert">"Concierto" @es</a> <sup class="type-c" title="class">c</sup>, <a href="#/Congress" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Congress">"Congreso" @es</a> <sup class="type-c" title="class">c</sup>, <a href="#/Fair" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Fair">"Feria" @es</a> <sup class="type-c" title="class">c</sup>, <a href="#/Festival" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Festival">"Festival" @es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/city" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/city">"Ciudad" @es</a> <sup class="type-op" title="object property">op</sup>, <a href="#/evenDate" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/evenDate">"FechaEvento" @es</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/eventId" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/eventId">"IdEvento" @es</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/eventName" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/eventName">"NombreEvento" @es</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a> <sup class="type-op" title="object property">op</sup>, <a href="#/evenType" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/evenType">"tipoEvento" @es</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/hasEvent" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasEvent">"tieneEvento" @es</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/Deportivo" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Deportivo">Deportivo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Fair">
+  <h3>"Feria" @es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Fair</p>
+  <div class="comment">
+   <span class="markdown">"Un evento público para la exhibición de productos agrícolas o industriales, a menudo con entretenimiento." @es</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Event" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event">"Evento"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Festival">
+  <h3>"Festival" @es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Festival</p>
+  <div class="comment">
+   <span class="markdown">"Un periodo de celebraciones, típicamente uno con un tema cultural o religioso." @es</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Event" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event">"Evento"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Hotel">
+  <h3>"Hotel" @es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel</p>
+  <div class="comment">
+   <span class="markdown">"Un establecimiento que proporciona alojamiento, comidas y otros servicios para viajeros y turistas."@es</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1 <a href="#/City" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City">"Ciudad"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/ExpensiveHotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/ExpensiveHotel">"HotelCaro" @es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/city" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/city">"Ciudad" @es</a> <sup class="type-op" title="object property">op</sup>, <a href="#/hotelPriceNight" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelPriceNight">"PrecioNoche" @es</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/hotelRating" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelRating">"PuntuacionHotel" @es</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a> <sup class="type-op" title="object property">op</sup>, <a href="#/hotelStars" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelStars">"estrellasHotel" @es</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/hotelId" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelId">"idHotel" @es</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/hotelName" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelName">"nombreHotel" @es</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/hotelType" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelType">"tipoHotel" @es</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/hasHotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasHotel">"tieneHotel" @es</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/HotelDelMar" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/HotelDelMar">Hotel Del Mar</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/hotelPalaceMadrid" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelPalaceMadrid">hotel Palace Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/ExpensiveHotel">
+  <h3>"HotelCaro" @es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/ExpensiveHotel</p>
+  <div class="comment">
+   <span class="markdown">"A hotel whose price is greater than 200." @en</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Hotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel">"Hotel" @es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Metro">
+  <h3>"Metro" @es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Metro</p>
+  <div class="comment">
+   <span class="markdown">"Un sistema de transporte ferroviario urbano subterráneo o elevado." @es</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Transportation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation">"Transport"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Museum">
+  <h3>"Museo" @es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Museum</p>
+  <div class="comment">
+   <span class="markdown">"Una institución que conserva colecciones de objetos de interés científico, histórico, artístico o cultural y los exhibe al público." @es</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Attraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction">"Atracción"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Palace">
+  <h3>"Palacio" @es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Palace</p>
+  <div class="comment">
+   <span class="markdown">"La residencia oficial de un monarca, presidente, obispo u otra alta personalidad." @es</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Attraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction">"Atracción"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Park">
+  <h3>"Parque" @es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Park</p>
+  <div class="comment">
+   <span class="markdown">"Una zona de terreno natural o seminatural reservada para el disfrute del público." @es</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Attraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction">"Atracción"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Restaurant">
+  <h3>"Restaurante" @es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant</p>
+  <div class="comment">
+   <span class="markdown">"Un lugar donde la gente paga para sentarse y comer comidas que se cocinan y sirven en el local."@es</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1 <a href="#/City" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City">"Ciudad"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/RecomendedRestaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/RecomendedRestaurant">"RestauranteRecomendado" @es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/city" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/city">"Ciudad" @es</a> <sup class="type-op" title="object property">op</sup>, <a href="#/restaurantRating" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantRating">"PuntuaciónRestaurante" @es</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a> <sup class="type-op" title="object property">op</sup>, <a href="#/restaurantId" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantId">"idRestaurante" @es</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/restaurantName" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantName">"nombreRestaurante" @es</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/restaurantAveragePrice" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantAveragePrice">"precioRestaurante" @es</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/restaurantCuisina" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantCuisina">"tipoCocina" @es</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/hasRestaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasRestaurant">"tieneRestaurante" @es</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/RestauranteJapones" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/RestauranteJapones">Restaurante Japones</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/RestauranteMexicano" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/RestauranteMexicano">Restaurante Mexicano</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/RecomendedRestaurant">
+  <h3>"RestauranteRecomendado" @es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/RecomendedRestaurant</p>
+  <div class="comment">
+   <span class="markdown">"This class represents restaurants that have been identified as recommended based on their rating being 4.0 or higher." @es</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Restaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant">"Restaurante" @es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Taxi">
+  <h3>"Taxi" @es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Taxi</p>
+  <div class="comment">
+   <span class="markdown">"Un vehículo de alquiler con conductor, utilizado por un solo pasajero o un pequeño grupo." @es</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Transportation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation">"Transport"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Transportation">
+  <h3>"Transport"@es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation</p>
+  <div class="comment">
+   <span class="markdown">"Un sistema o medio para transportar personas o mercancías."@es</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a> <sup class="type-op" title="object property">op</sup> <span class="logic">exactly</span> 1 <a href="#/City" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City">"Ciudad"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/Bus" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Bus">"Autobus" @es</a> <sup class="type-c" title="class">c</sup>, <a href="#/Bike" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Bike">"Bicicleta" @es</a> <sup class="type-c" title="class">c</sup>, <a href="#/Metro" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Metro">"Metro" @es</a> <sup class="type-c" title="class">c</sup>, <a href="#/Taxi" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Taxi">"Taxi" @es</a> <sup class="type-c" title="class">c</sup>, <a href="#/Tram" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Tram">"Tranvía" @es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/city" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/city">"Ciudad" @es</a> <sup class="type-op" title="object property">op</sup>, <a href="#/transportationCompany" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationCompany">"CompañiaTransporte" @es</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/transportationCost" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationCost">"CosteTransporte" @es</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a> <sup class="type-op" title="object property">op</sup>, <a href="#/transportationId" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationId">"idTransporte" @es</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/transportationType" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationType">"tipoTransporte" @es</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/hasTransportation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasTransportation">"tieneTransporte" @es</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/TranviaToledo" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/TranviaToledo">Tranvia Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Tram">
+  <h3>"Tranvía" @es<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Tram</p>
+  <div class="comment">
+   <span class="markdown">"Un vehículo ferroviario ligero diseñado para el transporte de pasajeros urbanos, que circula por raíles en la calle." @es</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/Transportation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation">"Transport"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#/city" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/city">"Ciudad" @es</a></li>
+  <li><a href="#/hasAttraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasAttraction">"tieneAtraccion" @es</a></li>
+  <li><a href="#/hasEvent" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasEvent">"tieneEvento" @es</a></li>
+  <li><a href="#/hasHotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasHotel">"tieneHotel" @es</a></li>
+  <li><a href="#/hasRestaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasRestaurant">"tieneRestaurante" @es</a></li>
+  <li><a href="#/hasTransportation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasTransportation">"tieneTransporte" @es</a></li>
+  <li><a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a></li>
+ </ul>
+ <div class="entity" id="/city">
+  <h3>"Ciudad" @es<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/city</p>
+  <div class="comment">
+   <span class="markdown">"Un núcleo urbano grande y complejo." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Attraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction">"Atracción"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#/Event" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event">"Evento"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#/Hotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel">"Hotel" @es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#/Restaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant">"Restaurante" @es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#/Transportation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation">"Transport"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/City" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City">"Ciudad"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/hasAttraction">
+  <h3>"tieneAtraccion" @es<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasAttraction</p>
+  <div class="comment">
+   <span class="markdown">"Relaciona una ciudad con una de las atracciones que se encuentran en ella." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/City" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City">"Ciudad"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/Attraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction">"Atracción"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/hasEvent">
+  <h3>"tieneEvento" @es<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasEvent</p>
+  <div class="comment">
+   <span class="markdown">"Relaciona una ciudad con uno de los eventos que tienen lugar en ella." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/City" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City">"Ciudad"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/Event" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event">"Evento"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/hasHotel">
+  <h3>"tieneHotel" @es<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasHotel</p>
+  <div class="comment">
+   <span class="markdown">"Relaciona una ciudad con uno de los hoteles que se encuentran en ella." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/City" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City">"Ciudad"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/Hotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel">"Hotel" @es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/hasRestaurant">
+  <h3>"tieneRestaurante" @es<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasRestaurant</p>
+  <div class="comment">
+   <span class="markdown">"Relaciona una ciudad con uno de los restaurantes que se encuentran en ella." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/City" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City">"Ciudad"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/Restaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant">"Restaurante" @es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/hasTransportation">
+  <h3>"tieneTransporte" @es<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasTransportation</p>
+  <div class="comment">
+   <span class="markdown">"Relaciona una ciudad con uno de los sistemas o medios de transporte disponibles en ella." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/City" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City">"Ciudad"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/Transportation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation">"Transport"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/locatedIn">
+  <h3>"UbicadoEn" @es<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn</p>
+  <div class="comment">
+   <span class="markdown">"Indica la ciudad en la que se encuentra una determinada entidad (atracción, hotel, restaurante, transporte)." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Attraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction">"Atracción"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#/Event" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event">"Evento"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#/Hotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel">"Hotel" @es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#/Restaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant">"Restaurante" @es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dd>
+     <a href="#/Transportation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation">"Transport"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/City" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City">"Ciudad"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#/hasAttraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasAttraction">"tieneAtraccion" @es</a> <sup class="type-op" title="object property">op</sup>, <a href="#/hasEvent" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasEvent">"tieneEvento" @es</a> <sup class="type-op" title="object property">op</sup>, <a href="#/hasHotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasHotel">"tieneHotel" @es</a> <sup class="type-op" title="object property">op</sup>, <a href="#/hasRestaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasRestaurant">"tieneRestaurante" @es</a> <sup class="type-op" title="object property">op</sup>, <a href="#/hasTransportation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasTransportation">"tieneTransporte" @es</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#/attractionId" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionId">"AtracciónId" @es</a></li>
+  <li><a href="#/attractionName" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionName">"AtracciónNombre" @es</a></li>
+  <li><a href="#/cityId" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/cityId">"CiudadId" @es</a></li>
+  <li><a href="#cityLocation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2#cityLocation">"CiudadLocalizacion" @es</a></li>
+  <li><a href="#cityName" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2#cityName">"CiudadNombre" @es</a></li>
+  <li><a href="#/transportationCompany" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationCompany">"CompañiaTransporte" @es</a></li>
+  <li><a href="#/transportationCost" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationCost">"CosteTransporte" @es</a></li>
+  <li><a href="#/hotelStars" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelStars">"estrellasHotel" @es</a></li>
+  <li><a href="#/evenDate" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/evenDate">"FechaEvento" @es</a></li>
+  <li><a href="#/eventId" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/eventId">"IdEvento" @es</a></li>
+  <li><a href="#/hotelId" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelId">"idHotel" @es</a></li>
+  <li><a href="#/restaurantId" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantId">"idRestaurante" @es</a></li>
+  <li><a href="#/transportationId" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationId">"idTransporte" @es</a></li>
+  <li><a href="#/eventName" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/eventName">"NombreEvento" @es</a></li>
+  <li><a href="#/hotelName" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelName">"nombreHotel" @es</a></li>
+  <li><a href="#/restaurantName" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantName">"nombreRestaurante" @es</a></li>
+  <li><a href="#/hotelPriceNight" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelPriceNight">"PrecioNoche" @es</a></li>
+  <li><a href="#/restaurantAveragePrice" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantAveragePrice">"precioRestaurante" @es</a></li>
+  <li><a href="#/attractionRating" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionRating">"PuntuacionAtraccion" @es</a></li>
+  <li><a href="#/hotelRating" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelRating">"PuntuacionHotel" @es</a></li>
+  <li><a href="#/restaurantRating" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantRating">"PuntuaciónRestaurante" @es</a></li>
+  <li><a href="#/attractionType" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionType">"Tipo de atracción" @es</a></li>
+  <li><a href="#/restaurantCuisina" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantCuisina">"tipoCocina" @es</a></li>
+  <li><a href="#/evenType" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/evenType">"tipoEvento" @es</a></li>
+  <li><a href="#/hotelType" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelType">"tipoHotel" @es</a></li>
+  <li><a href="#/transportationType" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationType">"tipoTransporte" @es</a></li>
+ </ul>
+ <div class="entity" id="/attractionId">
+  <h3>"AtracciónId" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionId</p>
+  <div class="comment">
+   <span class="markdown">"Identificador único para cada atracción." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Attraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction">"Atracción"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/attractionName">
+  <h3>"AtracciónNombre" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionName</p>
+  <div class="comment">
+   <span class="markdown">"Nombre por el que se conoce la atracción." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Attraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction">"Atracción"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/cityId">
+  <h3>"CiudadId" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/cityId</p>
+  <div class="comment">
+   <span class="markdown">"Identificador único para cada ciudad." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/City" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City">"Ciudad"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="cityLocation">
+  <h3>"CiudadLocalizacion" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2#cityLocation</p>
+  <div class="comment">
+   <span class="markdown">"Coordenadas geográficas u otra información de ubicación de la ciudad." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/City" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City">"Ciudad"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="cityName">
+  <h3>"CiudadNombre" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2#cityName</p>
+  <div class="comment">
+   <span class="markdown">"Nombre por el que se conoce la ciudad." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/transportationCompany">
+  <h3>"CompañiaTransporte" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationCompany</p>
+  <div class="comment">
+   <span class="markdown">"Nombre de la compañía que opera el servicio de transporte." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Transportation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation">"Transport"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/transportationCost">
+  <h3>"CosteTransporte" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationCost</p>
+  <div class="comment">
+   <span class="markdown">"Coste medio de utilizar este medio de transporte." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Transportation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation">"Transport"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/hotelStars">
+  <h3>"estrellasHotel" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelStars</p>
+  <div class="comment">
+   <span class="markdown">"Número de estrellas que clasifican al hotel." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Hotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel">"Hotel" @es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/evenDate">
+  <h3>"FechaEvento" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/evenDate</p>
+  <div class="comment">
+   <span class="markdown">"Día en el que tiene lugar el evento." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Event" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event">"Evento"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/eventId">
+  <h3>"IdEvento" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/eventId</p>
+  <div class="comment">
+   <span class="markdown">"Identificador único para cada evento." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Event" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event">"Evento"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/hotelId">
+  <h3>"idHotel" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelId</p>
+  <div class="comment">
+   <span class="markdown">"Identificador único para cada hotel." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Hotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel">"Hotel" @es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/restaurantId">
+  <h3>"idRestaurante" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantId</p>
+  <div class="comment">
+   <span class="markdown">"Identificador único para cada restaurante." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Restaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant">"Restaurante" @es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/transportationId">
+  <h3>"idTransporte" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationId</p>
+  <div class="comment">
+   <span class="markdown">"Identificador único para cada medio de transporte." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Transportation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation">"Transport"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/eventName">
+  <h3>"NombreEvento" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/eventName</p>
+  <div class="comment">
+   <span class="markdown">"Nombre por el que se conoce el evento." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Event" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event">"Evento"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/hotelName">
+  <h3>"nombreHotel" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelName</p>
+  <div class="comment">
+   <span class="markdown">"Nombre por el que se conoce el hotel." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Hotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel">"Hotel" @es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/restaurantName">
+  <h3>"nombreRestaurante" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantName</p>
+  <div class="comment">
+   <span class="markdown">"Nombre por el que se conoce el restaurante." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Restaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant">"Restaurante" @es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/hotelPriceNight">
+  <h3>"PrecioNoche" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelPriceNight</p>
+  <div class="comment">
+   <span class="markdown">"Precio medio por una noche de alojamiento en el hotel." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Hotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel">"Hotel" @es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/restaurantAveragePrice">
+  <h3>"precioRestaurante" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantAveragePrice</p>
+  <div class="comment">
+   <span class="markdown">"Precio medio de una comida en el restaurante." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Restaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant">"Restaurante" @es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/attractionRating">
+  <h3>"PuntuacionAtraccion" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionRating</p>
+  <div class="comment">
+   <span class="markdown">"Puntuación o evaluación de la atracción." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Attraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction">"Atracción"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/hotelRating">
+  <h3>"PuntuacionHotel" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelRating</p>
+  <div class="comment">
+   <span class="markdown">"Puntuación o evaluación del hotel." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Hotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel">"Hotel" @es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/restaurantRating">
+  <h3>"PuntuaciónRestaurante" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantRating</p>
+  <div class="comment">
+   <span class="markdown">"Puntuación o evaluación del restaurante." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Restaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant">"Restaurante" @es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/attractionType">
+  <h3>"Tipo de atracción" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionType</p>
+  <div class="comment">
+   <span class="markdown">"Categoría o clase a la que pertenece la atracción." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Attraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction">"Atracción"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/restaurantCuisina">
+  <h3>"tipoCocina" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantCuisina</p>
+  <div class="comment">
+   <span class="markdown">"Tipo de cocina que ofrece el restaurante." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Restaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant">"Restaurante" @es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/evenType">
+  <h3>"tipoEvento" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/evenType</p>
+  <div class="comment">
+   <span class="markdown">"Categoría o clase a la que pertenece el evento." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Event" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event">"Evento"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/hotelType">
+  <h3>"tipoHotel" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelType</p>
+  <div class="comment">
+   <span class="markdown">"Categoría o clase a la que pertenece el hotel." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Hotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel">"Hotel" @es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/transportationType">
+  <h3>"tipoTransporte" @es<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationType</p>
+  <div class="comment">
+   <span class="markdown">"Categoría o clase del medio de transporte." @es</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/Transportation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation">"Transport"@es</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/elements/1.1/created" title="http://purl.org/dc/elements/1.1/created"> <span>created</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description"> <span>description</span> </a></li>
+  <li><a href="#http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" title="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"> <span>is Rule Enabled</span> </a></li>
+  <li><a href="#http://www.w3.org/2002/07/owl#sameAs" title="http://www.w3.org/2002/07/owl#sameAs"> <span>same As</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/title" title="http://purl.org/dc/elements/1.1/title"> <span>title</span> </a></li>
+  <li><a href="#http://www.w3.org/2002/07/owl#versionInfo" title="http://www.w3.org/2002/07/owl#versionInfo"> <span>version Info</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/created">
+  <h3>created<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/created</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/creator">
+  <h3>creator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/creator</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/description">
+  <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/description</p>
+ </div>
+ <div class="entity" id="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+  <h3>is Rule Enabled<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2002/07/owl#sameAs">
+  <h3>same As<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2002/07/owl#sameAs</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/title">
+  <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/title</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2002/07/owl#versionInfo">
+  <h3>version Info<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2002/07/owl#versionInfo</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#/Deportivo" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Deportivo"> <span>Deportivo</span> </a></li>
+  <li><a href="#/HotelDelMar" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/HotelDelMar"> <span>Hotel Del Mar</span> </a></li>
+  <li><a href="#/hotelPalaceMadrid" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelPalaceMadrid"> <span>hotel Palace Madrid</span> </a></li>
+  <li><a href="#/Madrid" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Madrid"> <span>Madrid</span> </a></li>
+  <li><a href="#/Museo" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Museo"> <span>Museo</span> </a></li>
+  <li><a href="#/RestauranteJapones" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/RestauranteJapones"> <span>Restaurante Japones</span> </a></li>
+  <li><a href="#/RestauranteMexicano" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/RestauranteMexicano"> <span>Restaurante Mexicano</span> </a></li>
+  <li><a href="#/Toledo" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Toledo"> <span>Toledo</span> </a></li>
+  <li><a href="#/TranviaToledo" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/TranviaToledo"> <span>Tranvia Toledo</span> </a></li>
+ </ul>
+ <div class="entity" id="/Deportivo">
+  <h3>Deportivo<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Deportivo</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Event" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event">"Evento"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a> <sup class="type-op" title="object property">op</sup> <a href="#/Toledo" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Toledo">Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/evenDate" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/evenDate">"FechaEvento" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2024-08-26T00:00:00"^^<a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a> </span>
+   </dd>
+   <dd>
+    <a href="#/evenType" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/evenType">"tipoEvento" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">""Deportivo""</span>
+   </dd>
+   <dd>
+    <a href="#/eventId" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/eventId">"IdEvento" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"5"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#/eventName" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/eventName">"NombreEvento" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">""Feria Toledo""</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/HotelDelMar">
+  <h3>Hotel Del Mar<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/HotelDelMar</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Hotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel">"Hotel" @es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a> <sup class="type-op" title="object property">op</sup> <a href="#/Toledo" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Toledo">Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/hotelId" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelId">"idHotel" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"17"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#/hotelName" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelName">"nombreHotel" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">""Hotel Del Mar Toledo""</span>
+   </dd>
+   <dd>
+    <a href="#/hotelPriceNight" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelPriceNight">"PrecioNoche" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"145.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+   <dd>
+    <a href="#/hotelRating" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelRating">"PuntuacionHotel" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.3"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+   <dd>
+    <a href="#/hotelStars" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelStars">"estrellasHotel" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"5"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#/hotelType" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelType">"tipoHotel" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">""Playa""</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/hotelPalaceMadrid">
+  <h3>hotel Palace Madrid<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelPalaceMadrid</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Hotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel">"Hotel" @es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a> <sup class="type-op" title="object property">op</sup> <a href="#/Madrid" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Madrid">Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/hotelId" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelId">"idHotel" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"18"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#/hotelName" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelName">"nombreHotel" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">""Hotel Palace Madrid""</span>
+   </dd>
+   <dd>
+    <a href="#/hotelPriceNight" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelPriceNight">"PrecioNoche" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"290.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+   <dd>
+    <a href="#/hotelRating" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelRating">"PuntuacionHotel" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.2"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+   <dd>
+    <a href="#/hotelStars" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelStars">"estrellasHotel" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#/hotelType" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelType">"tipoHotel" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">""Turistico""</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Madrid">
+  <h3>Madrid<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Madrid</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/City" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City">"Ciudad"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#cityLocation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2#cityLocation">"CiudadLocalizacion" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">""40.4168,-3.7038""</span>
+   </dd>
+   <dd>
+    <a href="#cityName" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2#cityName">"CiudadNombre" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">""Madrid""</span>
+   </dd>
+   <dd>
+    <a href="#/cityId" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/cityId">"CiudadId" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Museo">
+  <h3>Museo<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Museo</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Attraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction">"Atracción"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a> <sup class="type-op" title="object property">op</sup> <a href="#/Toledo" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Toledo">Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/attractionId" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionId">"AtracciónId" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"56"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#/attractionName" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionName">"AtracciónNombre" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">""Museo Toledo""</span>
+   </dd>
+   <dd>
+    <a href="#/attractionRating" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionRating">"PuntuacionAtraccion" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.2"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+   <dd>
+    <a href="#/attractionType" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionType">"Tipo de atracción" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">""Cultural""</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/RestauranteJapones">
+  <h3>Restaurante Japones<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/RestauranteJapones</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Restaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant">"Restaurante" @es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a> <sup class="type-op" title="object property">op</sup> <a href="#/Madrid" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Madrid">Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/restaurantAveragePrice" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantAveragePrice">"precioRestaurante" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"30.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+   <dd>
+    <a href="#/restaurantCuisina" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantCuisina">"tipoCocina" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">""Japonesa""</span>
+   </dd>
+   <dd>
+    <a href="#/restaurantId" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantId">"idRestaurante" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#/restaurantName" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantName">"nombreRestaurante" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">""Restaurante Gourmet Madrid""</span>
+   </dd>
+   <dd>
+    <a href="#/restaurantRating" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantRating">"PuntuaciónRestaurante" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.8"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/RestauranteMexicano">
+  <h3>Restaurante Mexicano<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/RestauranteMexicano</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Restaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant">"Restaurante" @es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a> <sup class="type-op" title="object property">op</sup> <a href="#/Toledo" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Toledo">Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/restaurantAveragePrice" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantAveragePrice">"precioRestaurante" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"46.0"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+   <dd>
+    <a href="#/restaurantCuisina" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantCuisina">"tipoCocina" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">""Mexicana""</span>
+   </dd>
+   <dd>
+    <a href="#/restaurantId" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantId">"idRestaurante" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#/restaurantName" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantName">"nombreRestaurante" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">""Restaurante Tradición Toledo""</span>
+   </dd>
+   <dd>
+    <a href="#/restaurantRating" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantRating">"PuntuaciónRestaurante" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3.7"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/Toledo">
+  <h3>Toledo<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Toledo</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/City" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City">"Ciudad"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#cityLocation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2#cityLocation">"CiudadLocalizacion" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">""39.8628,-4.0273""</span>
+   </dd>
+   <dd>
+    <a href="#cityName" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2#cityName">"CiudadNombre" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">""Toledo""</span>
+   </dd>
+   <dd>
+    <a href="#/cityId" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/cityId">"CiudadId" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/TranviaToledo">
+  <h3>Tranvia Toledo<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/TranviaToledo</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/Transportation" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation">"Transport"@es</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/locatedIn" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">"UbicadoEn" @es</a> <sup class="type-op" title="object property">op</sup> <a href="#/Toledo" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Toledo">Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/transportationCompany" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationCompany">"CompañiaTransporte" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">""Trans Toledo""</span>
+   </dd>
+   <dd>
+    <a href="#/transportationCost" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationCost">"CosteTransporte" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3.61"^^<a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a> </span>
+   </dd>
+   <dd>
+    <a href="#/transportationId" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationId">"idTransporte" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#/transportationType" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationType">"tipoTransporte" @es</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">""Tranvía""</span>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="swrlrules">
+ <h3 id="swrlrules" class="list">SWRL rules</h3>
+ <ul class="hlist">
+  <li><a href="#d4e1508">ExpensiveHotel</a></li>
+  <li><a href="#d4e1385">PopularAttraction</a></li>
+  <li><a href="#d4e1630">RecomendedRestaurant</a></li>
+ </ul>
+ <div class="entity" id="d4e1508">
+  <h3>ExpensiveHotel<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>"A hotel whose price is greater than 200."<br><br><a href="#/Hotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel">"Hotel" @es</a> <sup class="type-c" title="class">c</sup>(?) , <a href="#/hotelPriceNight" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelPriceNight">"PrecioNoche" @es</a> <sup class="type-dp" title="data property">dp</sup>(?,?) , <a href="http://www.w3.org/2003/11/swrlb#greaterThan" title="greaterThan">greaterThan</a>(?) -&gt; <a href="#/ExpensiveHotel" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/ExpensiveHotel">"HotelCaro" @es</a> <sup class="type-c" title="class">c</sup>(?)</p>
+ </div>
+ <div class="entity" id="d4e1385">
+  <h3>PopularAttraction<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>"An attraction that has a popularity greater than 4."<br><br><a href="#/Attraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction">"Atracción"@es</a> <sup class="type-c" title="class">c</sup>(?) , <a href="#/attractionRating" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionRating">"PuntuacionAtraccion" @es</a> <sup class="type-dp" title="data property">dp</sup>(?,?) , <a href="http://www.w3.org/2003/11/swrlb#greaterThan" title="greaterThan">greaterThan</a>(?) -&gt; <a href="#/PopularAttraction" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/PopularAttraction">"AtracciónPopular" @es</a> <sup class="type-c" title="class">c</sup>(?)</p>
+ </div>
+ <div class="entity" id="d4e1630">
+  <h3>RecomendedRestaurant<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>"This class represents restaurants that have been identified as recommended based on their rating being 4.0 or higher."<br><br><a href="#/Restaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant">"Restaurante" @es</a> <sup class="type-c" title="class">c</sup>(?) , <a href="#/restaurantRating" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantRating">"PuntuaciónRestaurante" @es</a> <sup class="type-dp" title="data property">dp</sup>(?,?) , <a href="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual" title="greaterThanOrEqual">greaterThanOrEqual</a>(?) -&gt; <a href="#/RecomendedRestaurant" title="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/RecomendedRestaurant">"RestauranteRecomendado" @es</a> <sup class="type-c" title="class">c</sup>(?)</p>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
