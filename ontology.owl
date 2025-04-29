@@ -1,0 +1,1246 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2#"
+     xml:base="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:RepresentacionDelConocimientoPEC_2="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/"
+     xmlns:RepresentacionDelConocimientoPEC_21="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2">
+        <rdfs:seeAlso>https://andrazer.github.io/RepresentacionDelConocimientoPEC_2-ontology/index-en.html</rdfs:seeAlso>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#sameAs -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#sameAs"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/city -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/city">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City"/>
+        <rdfs:comment>&quot;Un núcleo urbano grande y complejo.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;Ciudad&quot; @es</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasAttraction -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasAttraction">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction"/>
+        <rdfs:comment>&quot;Relaciona una ciudad con una de las atracciones que se encuentran en ella.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;tieneAtraccion&quot; @es</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasEvent -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasEvent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event"/>
+        <rdfs:comment>&quot;Relaciona una ciudad con uno de los eventos que tienen lugar en ella.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;tieneEvento&quot; @es</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasHotel -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasHotel">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel"/>
+        <rdfs:comment>&quot;Relaciona una ciudad con uno de los hoteles que se encuentran en ella.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;tieneHotel&quot; @es</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasRestaurant -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasRestaurant">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant"/>
+        <rdfs:comment>&quot;Relaciona una ciudad con uno de los restaurantes que se encuentran en ella.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;tieneRestaurante&quot; @es</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasTransportation -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasTransportation">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation"/>
+        <rdfs:comment>&quot;Relaciona una ciudad con uno de los sistemas o medios de transporte disponibles en ella.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;tieneTransporte&quot; @es</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City"/>
+        <rdfs:comment>&quot;Indica la ciudad en la que se encuentra una determinada entidad (atracción, hotel, restaurante, transporte).&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;UbicadoEn&quot; @es</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2#cityLocation -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2#cityLocation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>&quot;Coordenadas geográficas u otra información de ubicación de la ciudad.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;CiudadLocalizacion&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2#cityName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2#cityName">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>&quot;Nombre por el que se conoce la ciudad.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;CiudadNombre&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionId">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>&quot;Identificador único para cada atracción.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;AtracciónId&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>&quot;Nombre por el que se conoce la atracción.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;AtracciónNombre&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionRating -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionRating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>&quot;Puntuación o evaluación de la atracción.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;PuntuacionAtraccion&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>&quot;Categoría o clase a la que pertenece la atracción.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;Tipo de atracción&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/cityId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/cityId">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>&quot;Identificador único para cada ciudad.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;CiudadId&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/evenDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/evenDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>&quot;Día en el que tiene lugar el evento.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;FechaEvento&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/evenType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/evenType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>&quot;Categoría o clase a la que pertenece el evento.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;tipoEvento&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/eventId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/eventId">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>&quot;Identificador único para cada evento.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;IdEvento&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/eventName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/eventName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>&quot;Nombre por el que se conoce el evento.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;NombreEvento&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelId">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>&quot;Identificador único para cada hotel.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;idHotel&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>&quot;Nombre por el que se conoce el hotel.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;nombreHotel&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelPriceNight -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelPriceNight">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>&quot;Precio medio por una noche de alojamiento en el hotel.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;PrecioNoche&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelRating -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelRating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>&quot;Puntuación o evaluación del hotel.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;PuntuacionHotel&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelStars -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelStars">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>&quot;Número de estrellas que clasifican al hotel.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;estrellasHotel&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>&quot;Categoría o clase a la que pertenece el hotel.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;tipoHotel&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantAveragePrice -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantAveragePrice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>&quot;Precio medio de una comida en el restaurante.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;precioRestaurante&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantCuisina -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantCuisina">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>&quot;Tipo de cocina que ofrece el restaurante.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;tipoCocina&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantId">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>&quot;Identificador único para cada restaurante.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;idRestaurante&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>&quot;Nombre por el que se conoce el restaurante.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;nombreRestaurante&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantRating -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantRating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>&quot;Puntuación o evaluación del restaurante.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;PuntuaciónRestaurante&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationCompany -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationCompany">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>&quot;Nombre de la compañía que opera el servicio de transporte.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;CompañiaTransporte&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationCost -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationCost">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>&quot;Coste medio de utilizar este medio de transporte.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;CosteTransporte&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationId">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>&quot;Identificador único para cada medio de transporte.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;idTransporte&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>&quot;Categoría o clase del medio de transporte.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;tipoTransporte&quot; @es</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>&quot;Un lugar de interés que los turistas visitan.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;Atracción&quot;@es</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Bike -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Bike">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation"/>
+        <rdfs:comment>&quot;Un vehículo de dos ruedas impulsado por pedales.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;Bicicleta&quot; @es</rdfs:label>
+        <owl:sameAs>http://dbpedia.org/resource/Bicycle</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Bus -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Bus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation"/>
+        <rdfs:comment>&quot;Un vehículo de carretera grande que transporta a muchos pasajeros por ruta.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;Autobus&quot; @es</rdfs:label>
+        <owl:sameAs>http://dbpedia.org/resource/Bus</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Carnival -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Carnival">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event"/>
+        <rdfs:comment>&quot;Un periodo de celebración pública que tiene lugar antes de la Cuaresma, típicamente con desfiles y disfraces.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;Carnaval&quot; @es</rdfs:label>
+        <owl:sameAs>http://dbpedia.org/resource/Carnival</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Castle -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Castle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction"/>
+        <rdfs:comment>&quot;Una fortificación medieval, típicamente con muros altos y torres.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;Castillo&quot; @es</rdfs:label>
+        <owl:sameAs>http://dbpedia.org/resource/Castle</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Cathedral -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Cathedral">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction"/>
+        <rdfs:comment>&quot;La iglesia principal de una diócesis, donde se encuentra la sede del obispo.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;Catedral&quot; @es</rdfs:label>
+        <owl:sameAs>http://dbpedia.org/resource/Cathedral</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasAttraction"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasEvent"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasHotel"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasRestaurant"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasTransportation"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasAttraction"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">100000</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasEvent"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">100000</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasHotel"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">100000</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasRestaurant"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">100000</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasTransportation"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">100000</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>&quot;Un núcleo urbano grande y complejo.&quot;@es</rdfs:comment>
+        <rdfs:label>&quot;Ciudad&quot;@es</rdfs:label>
+        <owl:sameAs>http://dbpedia.org/resource/City</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Concert -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Concert">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event"/>
+        <rdfs:comment>&quot;Una actuación musical en directo ante una audiencia.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;Concierto&quot; @es</rdfs:label>
+        <owl:sameAs>http://dbpedia.org/resource/Concert</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Congress -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Congress">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event"/>
+        <rdfs:comment>&quot;Una reunión formal de delegados o representantes para discutir asuntos específicos.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;Congreso&quot; @es</rdfs:label>
+        <owl:sameAs>http://dbpedia.org/resource/Congress</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>&quot;Algo que importante que sucede.&quot;@es</rdfs:comment>
+        <rdfs:label>&quot;Evento&quot;@es</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/ExpensiveHotel -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/ExpensiveHotel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel"/>
+        <rdfs:comment>&quot;A hotel whose price is greater than 200.&quot; @en</rdfs:comment>
+        <rdfs:label>&quot;HotelCaro&quot; @es</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Fair -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Fair">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event"/>
+        <rdfs:comment>&quot;Un evento público para la exhibición de productos agrícolas o industriales, a menudo con entretenimiento.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;Feria&quot; @es</rdfs:label>
+        <owl:sameAs>http://dbpedia.org/resource/Fair</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Festival -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Festival">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event"/>
+        <rdfs:comment>&quot;Un periodo de celebraciones, típicamente uno con un tema cultural o religioso.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;Festival&quot; @es</rdfs:label>
+        <owl:sameAs>http://dbpedia.org/resource/Festival</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>&quot;Un establecimiento que proporciona alojamiento, comidas y otros servicios para viajeros y turistas.&quot;@es</rdfs:comment>
+        <rdfs:label>&quot;Hotel&quot; @es</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Metro -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Metro">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation"/>
+        <rdfs:comment>&quot;Un sistema de transporte ferroviario urbano subterráneo o elevado.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;Metro&quot; @es</rdfs:label>
+        <owl:sameAs>http://dbpedia.org/resource/Subway</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Museum -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Museum">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction"/>
+        <rdfs:comment>&quot;Una institución que conserva colecciones de objetos de interés científico, histórico, artístico o cultural y los exhibe al público.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;Museo&quot; @es</rdfs:label>
+        <owl:sameAs>http://dbpedia.org/resource/Museum</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Palace -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Palace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction"/>
+        <rdfs:comment>&quot;La residencia oficial de un monarca, presidente, obispo u otra alta personalidad.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;Palacio&quot; @es</rdfs:label>
+        <owl:sameAs>http://dbpedia.org/resource/Palace</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Park -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Park">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction"/>
+        <rdfs:comment>&quot;Una zona de terreno natural o seminatural reservada para el disfrute del público.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;Parque&quot; @es</rdfs:label>
+        <owl:sameAs>http://dbpedia.org/resource/Park</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/PopularAttraction -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/PopularAttraction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction"/>
+        <rdfs:comment>&quot;An attraction that has a popularity greater than 80.&quot; @en</rdfs:comment>
+        <rdfs:label>&quot;AtracciónPopular&quot; @es</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/RecomendedRestaurant -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/RecomendedRestaurant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant"/>
+        <rdfs:comment>&quot;This class represents restaurants that have been identified as recommended based on their rating being 4.0 or higher.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;RestauranteRecomendado&quot; @es</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>&quot;Un lugar donde la gente paga para sentarse y comer comidas que se cocinan y sirven en el local.&quot;@es</rdfs:comment>
+        <rdfs:label>&quot;Restaurante&quot; @es</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Taxi -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Taxi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation"/>
+        <rdfs:comment>&quot;Un vehículo de alquiler con conductor, utilizado por un solo pasajero o un pequeño grupo.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;Taxi&quot; @es</rdfs:label>
+        <owl:sameAs>http://dbpedia.org/resource/Taxi</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Tram -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Tram">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation"/>
+        <rdfs:comment>&quot;Un vehículo ferroviario ligero diseñado para el transporte de pasajeros urbanos, que circula por raíles en la calle.&quot; @es</rdfs:comment>
+        <rdfs:label>&quot;Tranvía&quot; @es</rdfs:label>
+        <owl:sameAs>http://dbpedia.org/resource/Tram</owl:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment>&quot;Un sistema o medio para transportar personas o mercancías.&quot;@es</rdfs:comment>
+        <rdfs:label>&quot;Transport&quot;@es</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Deportivo -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Deportivo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event"/>
+        <RepresentacionDelConocimientoPEC_2:locatedIn rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Toledo"/>
+        <RepresentacionDelConocimientoPEC_2:evenDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-08-26T00:00:00</RepresentacionDelConocimientoPEC_2:evenDate>
+        <RepresentacionDelConocimientoPEC_2:evenType>&quot;Deportivo&quot;</RepresentacionDelConocimientoPEC_2:evenType>
+        <RepresentacionDelConocimientoPEC_2:eventId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</RepresentacionDelConocimientoPEC_2:eventId>
+        <RepresentacionDelConocimientoPEC_2:eventName>&quot;Feria Toledo&quot;</RepresentacionDelConocimientoPEC_2:eventName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/HotelDelMar -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/HotelDelMar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel"/>
+        <RepresentacionDelConocimientoPEC_2:locatedIn rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Toledo"/>
+        <RepresentacionDelConocimientoPEC_2:hotelId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</RepresentacionDelConocimientoPEC_2:hotelId>
+        <RepresentacionDelConocimientoPEC_2:hotelName>&quot;Hotel Del Mar Toledo&quot;</RepresentacionDelConocimientoPEC_2:hotelName>
+        <RepresentacionDelConocimientoPEC_2:hotelPriceNight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">145.0</RepresentacionDelConocimientoPEC_2:hotelPriceNight>
+        <RepresentacionDelConocimientoPEC_2:hotelRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.3</RepresentacionDelConocimientoPEC_2:hotelRating>
+        <RepresentacionDelConocimientoPEC_2:hotelStars rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</RepresentacionDelConocimientoPEC_2:hotelStars>
+        <RepresentacionDelConocimientoPEC_2:hotelType>&quot;Playa&quot;</RepresentacionDelConocimientoPEC_2:hotelType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Madrid -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Madrid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City"/>
+        <cityLocation>&quot;40.4168,-3.7038&quot;</cityLocation>
+        <cityName>&quot;Madrid&quot;</cityName>
+        <RepresentacionDelConocimientoPEC_2:cityId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</RepresentacionDelConocimientoPEC_2:cityId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Museo -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Museo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction"/>
+        <RepresentacionDelConocimientoPEC_2:locatedIn rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Toledo"/>
+        <RepresentacionDelConocimientoPEC_2:attractionId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">56</RepresentacionDelConocimientoPEC_2:attractionId>
+        <RepresentacionDelConocimientoPEC_2:attractionName>&quot;Museo Toledo&quot;</RepresentacionDelConocimientoPEC_2:attractionName>
+        <RepresentacionDelConocimientoPEC_2:attractionRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.2</RepresentacionDelConocimientoPEC_2:attractionRating>
+        <RepresentacionDelConocimientoPEC_2:attractionType>&quot;Cultural&quot;</RepresentacionDelConocimientoPEC_2:attractionType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/RestauranteJapones -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/RestauranteJapones">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant"/>
+        <RepresentacionDelConocimientoPEC_2:locatedIn rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Madrid"/>
+        <RepresentacionDelConocimientoPEC_2:restaurantAveragePrice rdf:datatype="http://www.w3.org/2001/XMLSchema#float">30.0</RepresentacionDelConocimientoPEC_2:restaurantAveragePrice>
+        <RepresentacionDelConocimientoPEC_2:restaurantCuisina>&quot;Japonesa&quot;</RepresentacionDelConocimientoPEC_2:restaurantCuisina>
+        <RepresentacionDelConocimientoPEC_2:restaurantId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</RepresentacionDelConocimientoPEC_2:restaurantId>
+        <RepresentacionDelConocimientoPEC_2:restaurantName>&quot;Restaurante Gourmet Madrid&quot;</RepresentacionDelConocimientoPEC_2:restaurantName>
+        <RepresentacionDelConocimientoPEC_2:restaurantRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.8</RepresentacionDelConocimientoPEC_2:restaurantRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/RestauranteMexicano -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/RestauranteMexicano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant"/>
+        <RepresentacionDelConocimientoPEC_2:locatedIn rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Toledo"/>
+        <RepresentacionDelConocimientoPEC_2:restaurantAveragePrice rdf:datatype="http://www.w3.org/2001/XMLSchema#float">46.0</RepresentacionDelConocimientoPEC_2:restaurantAveragePrice>
+        <RepresentacionDelConocimientoPEC_2:restaurantCuisina>&quot;Mexicana&quot;</RepresentacionDelConocimientoPEC_2:restaurantCuisina>
+        <RepresentacionDelConocimientoPEC_2:restaurantId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</RepresentacionDelConocimientoPEC_2:restaurantId>
+        <RepresentacionDelConocimientoPEC_2:restaurantName>&quot;Restaurante Tradición Toledo&quot;</RepresentacionDelConocimientoPEC_2:restaurantName>
+        <RepresentacionDelConocimientoPEC_2:restaurantRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.7</RepresentacionDelConocimientoPEC_2:restaurantRating>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Toledo -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Toledo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City"/>
+        <cityLocation>&quot;39.8628,-4.0273&quot;</cityLocation>
+        <cityName>&quot;Toledo&quot;</cityName>
+        <RepresentacionDelConocimientoPEC_2:cityId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</RepresentacionDelConocimientoPEC_2:cityId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/TranviaToledo -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/TranviaToledo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation"/>
+        <RepresentacionDelConocimientoPEC_2:locatedIn rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Toledo"/>
+        <RepresentacionDelConocimientoPEC_2:transportationCompany>&quot;Trans Toledo&quot;</RepresentacionDelConocimientoPEC_2:transportationCompany>
+        <RepresentacionDelConocimientoPEC_2:transportationCost rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.61</RepresentacionDelConocimientoPEC_2:transportationCost>
+        <RepresentacionDelConocimientoPEC_2:transportationId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</RepresentacionDelConocimientoPEC_2:transportationId>
+        <RepresentacionDelConocimientoPEC_2:transportationType>&quot;Tranvía&quot;</RepresentacionDelConocimientoPEC_2:transportationType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelPalaceMadrid -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelPalaceMadrid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel"/>
+        <RepresentacionDelConocimientoPEC_2:locatedIn rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Madrid"/>
+        <RepresentacionDelConocimientoPEC_2:hotelId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</RepresentacionDelConocimientoPEC_2:hotelId>
+        <RepresentacionDelConocimientoPEC_2:hotelName>&quot;Hotel Palace Madrid&quot;</RepresentacionDelConocimientoPEC_2:hotelName>
+        <RepresentacionDelConocimientoPEC_2:hotelPriceNight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">290.0</RepresentacionDelConocimientoPEC_2:hotelPriceNight>
+        <RepresentacionDelConocimientoPEC_2:hotelRating rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.2</RepresentacionDelConocimientoPEC_2:hotelRating>
+        <RepresentacionDelConocimientoPEC_2:hotelStars rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</RepresentacionDelConocimientoPEC_2:hotelStars>
+        <RepresentacionDelConocimientoPEC_2:hotelType>&quot;Turistico&quot;</RepresentacionDelConocimientoPEC_2:hotelType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/a">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/h">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/v">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>&quot;An attraction that has a popularity greater than 4.&quot;</rdfs:comment>
+        <rdfs:label>PopularAttraction</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionRating"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/a"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/r"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/r"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/PopularAttraction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>&quot;A hotel whose price is greater than 200.&quot;</rdfs:comment>
+        <rdfs:label>ExpensiveHotel</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/h"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelPriceNight"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/h"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/p"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/ExpensiveHotel"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/h"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>&quot;This class represents restaurants that have been identified as recommended based on their rating being 4.0 or higher.&quot;</rdfs:comment>
+        <rdfs:label>RecomendedRestaurant</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantRating"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/r"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/v"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/v"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/RecomendedRestaurant"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
