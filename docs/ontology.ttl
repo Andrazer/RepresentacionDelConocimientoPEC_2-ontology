@@ -7,11 +7,32 @@
 @base <http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2#> .
 
 <http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2> rdf:type owl:Ontology ;
-                                                                                                      rdfs:seeAlso "https://andrazer.github.io/RepresentacionDelConocimientoPEC_2-ontology/"^^xsd:anyURI .
+                                                                                                      <http://purl.org/dc/elements/1.1/created> "\"25/04/2025\"" ;
+                                                                                                      <http://purl.org/dc/elements/1.1/creator> "\"José Andrés Filgueira Sánchez\"" ;
+                                                                                                      <http://purl.org/dc/elements/1.1/description> "\"Esta ontología tiene como objeto modelar el conocimiento relacionado con el turismo inteligente, incluyendo eventos turísticos, oferta hotelera, atracciones turísticas y restaurantes en diferentes ciudades. Su propósito es estructurar la información para facilitar recomendaciones personalizadas a los turistas a través de la integración y consulta de datos turísticos para sistemas de recomendación y planificación de viajes.\"" ;
+                                                                                                      <http://purl.org/dc/elements/1.1/title> "\"Ontología de Turismo Inteligente y Recomendaciones (OTIR).\"" ;
+                                                                                                      rdfs:seeAlso "https://andrazer.github.io/RepresentacionDelConocimientoPEC_2-ontology/index-en.html" ;
+                                                                                                      owl:versionInfo 1.1 .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/elements/1.1/created
+<http://purl.org/dc/elements/1.1/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
 
 ###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
@@ -19,6 +40,10 @@
 
 ###  http://www.w3.org/2002/07/owl#sameAs
 owl:sameAs rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:AnnotationProperty .
 
 
 #################################################################

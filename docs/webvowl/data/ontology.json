@@ -3,12 +3,44 @@
   "header" : {
     "languages" : [ "undefined" ],
     "baseIris" : [ "http://www.w3.org/2000/01/rdf-schema", "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "undefined" : "\"Ontología de Turismo Inteligente y Recomendaciones (OTIR).\""
+    },
     "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "version" : "1.1",
+    "author" : [ "\"José Andrés Filgueira Sánchez\"" ],
+    "description" : {
+      "undefined" : "\"Esta ontología tiene como objeto modelar el conocimiento relacionado con el turismo inteligente, incluyendo eventos turísticos, oferta hotelera, atracciones turísticas y restaurantes en diferentes ciudades. Su propósito es estructurar la información para facilitar recomendaciones personalizadas a los turistas a través de la integración y consulta de datos turísticos para sistemas de recomendación y planificación de viajes.\""
+    },
     "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "\"José Andrés Filgueira Sánchez\"",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "\"25/04/2025\"",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.1",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "\"Ontología de Turismo Inteligente y Recomendaciones (OTIR).\"",
+        "type" : "label"
+      } ],
       "seeAlso" : [ {
         "identifier" : "seeAlso",
         "language" : "undefined",
-        "value" : "https://andrazer.github.io/RepresentacionDelConocimientoPEC_2-ontology/",
+        "value" : "https://andrazer.github.io/RepresentacionDelConocimientoPEC_2-ontology/index-en.html",
         "type" : "label"
       } ]
     }
@@ -99,10 +131,10 @@
     "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "52",
+    "id" : "76",
     "type" : "owl:Class"
   }, {
-    "id" : "76",
+    "id" : "52",
     "type" : "owl:Class"
   }, {
     "id" : "64",
@@ -191,7 +223,7 @@
   }, {
     "instances" : 0,
     "union" : [ "4", "11", "12", "13", "2" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "10"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -210,7 +242,7 @@
   }, {
     "instances" : 0,
     "union" : [ "4", "11", "12", "13", "2" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "18"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
@@ -507,28 +539,6 @@
     "attributes" : [ "external" ],
     "id" : "4"
   }, {
-    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Congress",
-    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
-    "instances" : 0,
-    "annotations" : {
-      "sameAs" : [ {
-        "identifier" : "sameAs",
-        "language" : "undefined",
-        "value" : "http://dbpedia.org/resource/Congress",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Congress",
-      "undefined" : "\"Congreso\" @es"
-    },
-    "comment" : {
-      "undefined" : "\"Una reunión formal de delegados o representantes para discutir asuntos específicos.\" @es"
-    },
-    "attributes" : [ "external" ],
-    "id" : "52",
-    "superClasses" : [ "13" ]
-  }, {
     "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Cathedral",
     "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
     "instances" : 0,
@@ -550,6 +560,28 @@
     "attributes" : [ "external" ],
     "id" : "76",
     "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Congress",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/Congress",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Congress",
+      "undefined" : "\"Congreso\" @es"
+    },
+    "comment" : {
+      "undefined" : "\"Una reunión formal de delegados o representantes para discutir asuntos específicos.\" @es"
+    },
+    "attributes" : [ "external" ],
+    "id" : "52",
+    "superClasses" : [ "13" ]
   }, {
     "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Tram",
     "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
@@ -1157,7 +1189,7 @@
     "comment" : {
       "undefined" : "\"Indica la ciudad en la que se encuentra una determinada entidad (atracción, hotel, restaurante, transporte).\" @es"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "38"
   }, {
     "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/cityId",
@@ -1200,7 +1232,7 @@
     "comment" : {
       "undefined" : "\"Relaciona una ciudad con uno de los sistemas o medios de transporte disponibles en ella.\" @es"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "43"
   }, {
     "range" : "13",
@@ -1282,7 +1314,7 @@
     "comment" : {
       "undefined" : "\"Un núcleo urbano grande y complejo.\" @es"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "62"
   }, {
     "range" : "11",
@@ -1339,20 +1371,6 @@
     "attributes" : [ "datatype", "external" ],
     "id" : "78"
   }, {
-    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelName",
-    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
-    "range" : "34",
-    "label" : {
-      "IRI-based" : "hotelName",
-      "undefined" : "\"nombreHotel\" @es"
-    },
-    "domain" : "12",
-    "comment" : {
-      "undefined" : "\"Nombre por el que se conoce el hotel.\" @es"
-    },
-    "attributes" : [ "datatype", "external" ],
-    "id" : "80"
-  }, {
     "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelRating",
     "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
     "range" : "29",
@@ -1363,6 +1381,20 @@
     "domain" : "12",
     "comment" : {
       "undefined" : "\"Puntuación o evaluación del hotel.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "80"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelName",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "hotelName",
+      "undefined" : "\"nombreHotel\" @es"
+    },
+    "domain" : "12",
+    "comment" : {
+      "undefined" : "\"Nombre por el que se conoce el hotel.\" @es"
     },
     "attributes" : [ "datatype", "external" ],
     "id" : "81"
@@ -1435,7 +1467,7 @@
     "comment" : {
       "undefined" : "\"Relaciona una ciudad con uno de los restaurantes que se encuentran en ella.\" @es"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "87"
   }, {
     "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionType",
@@ -1478,7 +1510,7 @@
     "comment" : {
       "undefined" : "\"Relaciona una ciudad con uno de los hoteles que se encuentran en ella.\" @es"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "92"
   }, {
     "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantCuisina",
@@ -1507,7 +1539,7 @@
     "comment" : {
       "undefined" : "\"Relaciona una ciudad con una de las atracciones que se encuentran en ella.\" @es"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "94"
   }, {
     "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/eventId",
@@ -1578,7 +1610,7 @@
     "comment" : {
       "undefined" : "\"Relaciona una ciudad con uno de los eventos que tienen lugar en ella.\" @es"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "101"
   }, {
     "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/eventName",

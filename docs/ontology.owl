@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2#"
      xml:base="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -12,7 +13,12 @@
      xmlns:RepresentacionDelConocimientoPEC_2="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/"
      xmlns:RepresentacionDelConocimientoPEC_21="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2">
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://andrazer.github.io/RepresentacionDelConocimientoPEC_2-ontology/</rdfs:seeAlso>
+        <dc:created>&quot;25/04/2025&quot;</dc:created>
+        <dc:creator>&quot;José Andrés Filgueira Sánchez&quot;</dc:creator>
+        <dc:description>&quot;Esta ontología tiene como objeto modelar el conocimiento relacionado con el turismo inteligente, incluyendo eventos turísticos, oferta hotelera, atracciones turísticas y restaurantes en diferentes ciudades. Su propósito es estructurar la información para facilitar recomendaciones personalizadas a los turistas a través de la integración y consulta de datos turísticos para sistemas de recomendación y planificación de viajes.&quot;</dc:description>
+        <dc:title>&quot;Ontología de Turismo Inteligente y Recomendaciones (OTIR).&quot;</dc:title>
+        <rdfs:seeAlso>https://andrazer.github.io/RepresentacionDelConocimientoPEC_2-ontology/index-en.html</rdfs:seeAlso>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -29,6 +35,34 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/created"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
     <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
 
 
@@ -40,6 +74,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#sameAs"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
     
 
 

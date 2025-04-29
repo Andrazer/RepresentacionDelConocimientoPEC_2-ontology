@@ -407,14 +407,41 @@
     "@id" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasHotel"
   } ]
 }, {
+  "@id" : "http://purl.org/dc/elements/1.1/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/created" : [ {
+    "@value" : "\"25/04/2025\""
+  } ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "\"José Andrés Filgueira Sánchez\""
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "\"Esta ontología tiene como objeto modelar el conocimiento relacionado con el turismo inteligente, incluyendo eventos turísticos, oferta hotelera, atracciones turísticas y restaurantes en diferentes ciudades. Su propósito es estructurar la información para facilitar recomendaciones personalizadas a los turistas a través de la integración y consulta de datos turísticos para sistemas de recomendación y planificación de viajes.\""
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@value" : "\"Ontología de Turismo Inteligente y Recomendaciones (OTIR).\""
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "https://andrazer.github.io/RepresentacionDelConocimientoPEC_2-ontology/"
+    "@value" : "https://andrazer.github.io/RepresentacionDelConocimientoPEC_2-ontology/index-en.html"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1.1"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2#cityLocation",
@@ -1527,6 +1554,9 @@
   "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
 }, {
   "@id" : "http://www.w3.org/2002/07/owl#sameAs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#versionInfo",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2003/11/swrlb#greaterThan",
