@@ -1,0 +1,1644 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://www.w3.org/2000/01/rdf-schema", "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "undefined" : "Ontología de Turismo Inteligente y Recomendaciones"
+    },
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "version" : "1.1",
+    "author" : [ "José Andrés Filgueira Sánchez" ],
+    "description" : {
+      "undefined" : "Esta ontología tiene como objeto modelar el conocimiento relacionado con el turismo inteligente, incluyendo eventos turísticos, oferta hotelera, atracciones turísticas y restaurantes en diferentes ciudades. Su propósito es estructurar la información para facilitar recomendaciones personalizadas a los turistas a través de la integración y consulta de datos turísticos para sistemas de recomendación y planificación de viajes."
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "José Andrés Filgueira Sánchez",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "25-04-2025",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.1",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Ontología de Turismo Inteligente y Recomendaciones",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://andrazer.github.io/RepresentacionDelConocimientoPEC_2-ontology/index-en.html",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "7",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "74",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "86",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/RecomendedRestaurant",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RecomendedRestaurant",
+      "undefined" : "\"RestauranteRecomendado\" @es"
+    },
+    "comment" : {
+      "undefined" : "\"This class represents restaurants that have been identified as recommended based on their rating being 4.0 or higher.\" @es"
+    },
+    "attributes" : [ "external" ],
+    "id" : "8",
+    "superClasses" : [ "4" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "4", "11", "12", "13", "2" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "10"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "15",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "4", "11", "12", "13", "2" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "19",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "7",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "21",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Metro",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/Subway",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Metro",
+      "undefined" : "\"Metro\" @es"
+    },
+    "comment" : {
+      "undefined" : "\"Un sistema de transporte ferroviario urbano subterráneo o elevado.\" @es"
+    },
+    "attributes" : [ "external" ],
+    "id" : "25",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Concert",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/Concert",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Concert",
+      "undefined" : "\"Concierto\" @es"
+    },
+    "comment" : {
+      "undefined" : "\"Una actuación musical en directo ante una audiencia.\" @es"
+    },
+    "attributes" : [ "external" ],
+    "id" : "26",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "29",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "17",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/City",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/City",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "City",
+      "undefined" : "\"Ciudad\"@es"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Madrid",
+      "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+      "labels" : {
+        "IRI-based" : "Madrid"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Toledo",
+      "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+      "labels" : {
+        "IRI-based" : "Toledo"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "\"Un núcleo urbano grande y complejo.\"@es"
+    },
+    "attributes" : [ "external" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/PopularAttraction",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PopularAttraction",
+      "undefined" : "\"AtracciónPopular\" @es"
+    },
+    "comment" : {
+      "undefined" : "\"An attraction that has a popularity greater than 80.\" @en"
+    },
+    "attributes" : [ "external" ],
+    "id" : "44",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Hotel",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Hotel",
+      "undefined" : "\"Hotel\" @es"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/HotelDelMar",
+      "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+      "labels" : {
+        "IRI-based" : "HotelDelMar"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelPalaceMadrid",
+      "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+      "labels" : {
+        "IRI-based" : "hotelPalaceMadrid"
+      }
+    } ],
+    "subClasses" : [ "48" ],
+    "comment" : {
+      "undefined" : "\"Un establecimiento que proporciona alojamiento, comidas y otros servicios para viajeros y turistas.\"@es"
+    },
+    "attributes" : [ "external" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Event",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event",
+      "undefined" : "\"Evento\"@es"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Deportivo",
+      "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+      "labels" : {
+        "IRI-based" : "Deportivo"
+      }
+    } ],
+    "subClasses" : [ "50", "47", "51", "52", "26" ],
+    "comment" : {
+      "undefined" : "\"Algo que importante que sucede.\"@es"
+    },
+    "attributes" : [ "external" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Castle",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/Castle",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Castle",
+      "undefined" : "\"Castillo\" @es"
+    },
+    "comment" : {
+      "undefined" : "\"Una fortificación medieval, típicamente con muros altos y torres.\" @es"
+    },
+    "attributes" : [ "external" ],
+    "id" : "74",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Restaurant",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Restaurant",
+      "undefined" : "\"Restaurante\" @es"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/RestauranteJapones",
+      "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+      "labels" : {
+        "IRI-based" : "RestauranteJapones"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/RestauranteMexicano",
+      "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+      "labels" : {
+        "IRI-based" : "RestauranteMexicano"
+      }
+    } ],
+    "subClasses" : [ "8" ],
+    "comment" : {
+      "undefined" : "\"Un lugar donde la gente paga para sentarse y comer comidas que se cocinan y sirven en el local.\"@es"
+    },
+    "attributes" : [ "external" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Congress",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/Congress",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Congress",
+      "undefined" : "\"Congreso\" @es"
+    },
+    "comment" : {
+      "undefined" : "\"Una reunión formal de delegados o representantes para discutir asuntos específicos.\" @es"
+    },
+    "attributes" : [ "external" ],
+    "id" : "52",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Cathedral",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/Cathedral",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Cathedral",
+      "undefined" : "\"Catedral\" @es"
+    },
+    "comment" : {
+      "undefined" : "\"La iglesia principal de una diócesis, donde se encuentra la sede del obispo.\" @es"
+    },
+    "attributes" : [ "external" ],
+    "id" : "76",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Tram",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/Tram",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Tram",
+      "undefined" : "\"Tranvía\" @es"
+    },
+    "comment" : {
+      "undefined" : "\"Un vehículo ferroviario ligero diseñado para el transporte de pasajeros urbanos, que circula por raíles en la calle.\" @es"
+    },
+    "attributes" : [ "external" ],
+    "id" : "64",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/ExpensiveHotel",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ExpensiveHotel",
+      "undefined" : "\"HotelCaro\" @es"
+    },
+    "comment" : {
+      "undefined" : "\"A hotel whose price is greater than 200.\" @en"
+    },
+    "attributes" : [ "external" ],
+    "id" : "48",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Museum",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/Museum",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Museum",
+      "undefined" : "\"Museo\" @es"
+    },
+    "comment" : {
+      "undefined" : "\"Una institución que conserva colecciones de objetos de interés científico, histórico, artístico o cultural y los exhibe al público.\" @es"
+    },
+    "attributes" : [ "external" ],
+    "id" : "66",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Taxi",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/Taxi",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Taxi",
+      "undefined" : "\"Taxi\" @es"
+    },
+    "comment" : {
+      "undefined" : "\"Un vehículo de alquiler con conductor, utilizado por un solo pasajero o un pequeño grupo.\" @es"
+    },
+    "attributes" : [ "external" ],
+    "id" : "68",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Festival",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/Festival",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Festival",
+      "undefined" : "\"Festival\" @es"
+    },
+    "comment" : {
+      "undefined" : "\"Un periodo de celebraciones, típicamente uno con un tema cultural o religioso.\" @es"
+    },
+    "attributes" : [ "external" ],
+    "id" : "51",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Attraction",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Attraction",
+      "undefined" : "\"Atracción\"@es"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Museo",
+      "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+      "labels" : {
+        "IRI-based" : "Museo"
+      }
+    } ],
+    "subClasses" : [ "1", "74", "72", "44", "76", "66" ],
+    "comment" : {
+      "undefined" : "\"Un lugar de interés que los turistas visitan.\" @es"
+    },
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Transportation",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Transportation",
+      "undefined" : "\"Transport\"@es"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/TranviaToledo",
+      "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+      "labels" : {
+        "IRI-based" : "TranviaToledo"
+      }
+    } ],
+    "subClasses" : [ "64", "70", "68", "25", "60" ],
+    "comment" : {
+      "undefined" : "\"Un sistema o medio para transportar personas o mercancías.\"@es"
+    },
+    "attributes" : [ "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Fair",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/Fair",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Fair",
+      "undefined" : "\"Feria\" @es"
+    },
+    "comment" : {
+      "undefined" : "\"Un evento público para la exhibición de productos agrícolas o industriales, a menudo con entretenimiento.\" @es"
+    },
+    "attributes" : [ "external" ],
+    "id" : "47",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Bus",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/Bus",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Bus",
+      "undefined" : "\"Autobus\" @es"
+    },
+    "comment" : {
+      "undefined" : "\"Un vehículo de carretera grande que transporta a muchos pasajeros por ruta.\" @es"
+    },
+    "attributes" : [ "external" ],
+    "id" : "60",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "79",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "89",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "91",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "95",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "96",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Park",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/Park",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Park",
+      "undefined" : "\"Parque\" @es"
+    },
+    "comment" : {
+      "undefined" : "\"Una zona de terreno natural o seminatural reservada para el disfrute del público.\" @es"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "54",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Carnival",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/Carnival",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Carnival",
+      "undefined" : "\"Carnaval\" @es"
+    },
+    "comment" : {
+      "undefined" : "\"Un periodo de celebración pública que tiene lugar antes de la Cuaresma, típicamente con desfiles y disfraces.\" @es"
+    },
+    "attributes" : [ "external" ],
+    "id" : "50",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "86",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Palace",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/Palace",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Palace",
+      "undefined" : "\"Palacio\" @es"
+    },
+    "comment" : {
+      "undefined" : "\"La residencia oficial de un monarca, presidente, obispo u otra alta personalidad.\" @es"
+    },
+    "attributes" : [ "external" ],
+    "id" : "72",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/Bike",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "instances" : 0,
+    "annotations" : {
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/Bicycle",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Bike",
+      "undefined" : "\"Bicicleta\" @es"
+    },
+    "comment" : {
+      "undefined" : "\"Un vehículo de dos ruedas impulsado por pedales.\" @es"
+    },
+    "attributes" : [ "external" ],
+    "id" : "70",
+    "superClasses" : [ "11" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "3",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "16",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "85",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "88",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "90",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "94",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "99",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "101",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "102",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "103",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantAveragePrice",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "restaurantAveragePrice",
+      "undefined" : "\"precioRestaurante\" @es"
+    },
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "\"Precio medio de una comida en el restaurante.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantRating",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "restaurantRating",
+      "undefined" : "\"PuntuaciónRestaurante\" @es"
+    },
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "\"Puntuación o evaluación del restaurante.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "6"
+  }, {
+    "range" : "4",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelStars",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "hotelStars",
+      "undefined" : "\"estrellasHotel\" @es"
+    },
+    "domain" : "12",
+    "comment" : {
+      "undefined" : "\"Número de estrellas que clasifican al hotel.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelType",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "hotelType",
+      "undefined" : "\"tipoHotel\" @es"
+    },
+    "domain" : "12",
+    "comment" : {
+      "undefined" : "\"Categoría o clase a la que pertenece el hotel.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionId",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "attractionId",
+      "undefined" : "\"AtracciónId\" @es"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "\"Identificador único para cada atracción.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionName",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "attractionName",
+      "undefined" : "\"AtracciónNombre\" @es"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "\"Nombre por el que se conoce la atracción.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "36"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/locatedIn",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "locatedIn",
+      "undefined" : "\"UbicadoEn\" @es"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "\"Indica la ciudad en la que se encuentra una determinada entidad (atracción, hotel, restaurante, transporte).\" @es"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "38"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/cityId",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "cityId",
+      "undefined" : "\"CiudadId\" @es"
+    },
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "\"Identificador único para cada ciudad.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "40"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelId",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "hotelId",
+      "undefined" : "\"idHotel\" @es"
+    },
+    "domain" : "12",
+    "comment" : {
+      "undefined" : "\"Identificador único para cada hotel.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasTransportation",
+    "inverse" : "38",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "hasTransportation",
+      "undefined" : "\"tieneTransporte\" @es"
+    },
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "\"Relaciona una ciudad con uno de los sistemas o medios de transporte disponibles en ella.\" @es"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "43"
+  }, {
+    "range" : "13",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "45"
+  }, {
+    "range" : "13",
+    "domain" : "47",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "46"
+  }, {
+    "range" : "13",
+    "domain" : "50",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "49"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2#cityLocation",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "cityLocation",
+      "undefined" : "\"CiudadLocalizacion\" @es"
+    },
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "\"Coordenadas geográficas u otra información de ubicación de la ciudad.\" @es"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationCost",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "transportationCost",
+      "undefined" : "\"CosteTransporte\" @es"
+    },
+    "domain" : "11",
+    "comment" : {
+      "undefined" : "\"Coste medio de utilizar este medio de transporte.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "55"
+  }, {
+    "range" : "13",
+    "domain" : "52",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "56"
+  }, {
+    "range" : "13",
+    "domain" : "51",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "57"
+  }, {
+    "range" : "12",
+    "domain" : "48",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "58"
+  }, {
+    "range" : "11",
+    "domain" : "60",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "59"
+  }, {
+    "range" : "11",
+    "domain" : "25",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/city",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "city",
+      "undefined" : "\"Ciudad\" @es"
+    },
+    "domain" : "10",
+    "comment" : {
+      "undefined" : "\"Un núcleo urbano grande y complejo.\" @es"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "62"
+  }, {
+    "range" : "11",
+    "domain" : "64",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "63"
+  }, {
+    "range" : "2",
+    "domain" : "66",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "65"
+  }, {
+    "range" : "11",
+    "domain" : "68",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "67"
+  }, {
+    "range" : "11",
+    "domain" : "70",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "69"
+  }, {
+    "range" : "2",
+    "domain" : "72",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "71"
+  }, {
+    "range" : "2",
+    "domain" : "74",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "73"
+  }, {
+    "range" : "2",
+    "domain" : "76",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "75"
+  }, {
+    "range" : "2",
+    "domain" : "44",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "77"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionRating",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "attractionRating",
+      "undefined" : "\"PuntuacionAtraccion\" @es"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "\"Puntuación o evaluación de la atracción.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "78"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelName",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "hotelName",
+      "undefined" : "\"nombreHotel\" @es"
+    },
+    "domain" : "12",
+    "comment" : {
+      "undefined" : "\"Nombre por el que se conoce el hotel.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "80"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelRating",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "hotelRating",
+      "undefined" : "\"PuntuacionHotel\" @es"
+    },
+    "domain" : "12",
+    "comment" : {
+      "undefined" : "\"Puntuación o evaluación del hotel.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "81"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hotelPriceNight",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "hotelPriceNight",
+      "undefined" : "\"PrecioNoche\" @es"
+    },
+    "domain" : "12",
+    "comment" : {
+      "undefined" : "\"Precio medio por una noche de alojamiento en el hotel.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "82"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantId",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "restaurantId",
+      "undefined" : "\"idRestaurante\" @es"
+    },
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "\"Identificador único para cada restaurante.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "83"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationCompany",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "transportationCompany",
+      "undefined" : "\"CompañiaTransporte\" @es"
+    },
+    "domain" : "11",
+    "comment" : {
+      "undefined" : "\"Nombre de la compañía que opera el servicio de transporte.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "84"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2#cityName",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "86",
+    "label" : {
+      "IRI-based" : "cityName",
+      "undefined" : "\"CiudadNombre\" @es"
+    },
+    "domain" : "19",
+    "comment" : {
+      "undefined" : "\"Nombre por el que se conoce la ciudad.\" @es"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasRestaurant",
+    "inverse" : "38",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasRestaurant",
+      "undefined" : "\"tieneRestaurante\" @es"
+    },
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "\"Relaciona una ciudad con uno de los restaurantes que se encuentran en ella.\" @es"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "87"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/attractionType",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "89",
+    "label" : {
+      "IRI-based" : "attractionType",
+      "undefined" : "\"Tipo de atracción\" @es"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "\"Categoría o clase a la que pertenece la atracción.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "88"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/evenDate",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "91",
+    "label" : {
+      "IRI-based" : "evenDate",
+      "undefined" : "\"FechaEvento\" @es"
+    },
+    "domain" : "13",
+    "comment" : {
+      "undefined" : "\"Día en el que tiene lugar el evento.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "90"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasHotel",
+    "inverse" : "38",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasHotel",
+      "undefined" : "\"tieneHotel\" @es"
+    },
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "\"Relaciona una ciudad con uno de los hoteles que se encuentran en ella.\" @es"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "92"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantCuisina",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "restaurantCuisina",
+      "undefined" : "\"tipoCocina\" @es"
+    },
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "\"Tipo de cocina que ofrece el restaurante.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "93"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasAttraction",
+    "inverse" : "38",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasAttraction",
+      "undefined" : "\"tieneAtraccion\" @es"
+    },
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "\"Relaciona una ciudad con una de las atracciones que se encuentran en ella.\" @es"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "94"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/eventId",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "96",
+    "label" : {
+      "IRI-based" : "eventId",
+      "undefined" : "\"IdEvento\" @es"
+    },
+    "domain" : "13",
+    "comment" : {
+      "undefined" : "\"Identificador único para cada evento.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "97"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/evenType",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "95",
+    "label" : {
+      "IRI-based" : "evenType",
+      "undefined" : "\"tipoEvento\" @es"
+    },
+    "domain" : "13",
+    "comment" : {
+      "undefined" : "\"Categoría o clase a la que pertenece el evento.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "98"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationType",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "transportationType",
+      "undefined" : "\"tipoTransporte\" @es"
+    },
+    "domain" : "11",
+    "comment" : {
+      "undefined" : "\"Categoría o clase del medio de transporte.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "99"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/transportationId",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "transportationId",
+      "undefined" : "\"idTransporte\" @es"
+    },
+    "domain" : "11",
+    "comment" : {
+      "undefined" : "\"Identificador único para cada medio de transporte.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "100"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/hasEvent",
+    "inverse" : "38",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "hasEvent",
+      "undefined" : "\"tieneEvento\" @es"
+    },
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "\"Relaciona una ciudad con uno de los eventos que tienen lugar en ella.\" @es"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "101"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/eventName",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "eventName",
+      "undefined" : "\"NombreEvento\" @es"
+    },
+    "domain" : "13",
+    "comment" : {
+      "undefined" : "\"Nombre por el que se conoce el evento.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "102"
+  }, {
+    "iri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2/restaurantName",
+    "baseIri" : "http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "restaurantName",
+      "undefined" : "\"nombreRestaurante\" @es"
+    },
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "\"Nombre por el que se conoce el restaurante.\" @es"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "103"
+  } ]
+}
