@@ -4,9 +4,6 @@
 @prefix : <> .
 <..\index-en.html> a prov:Entity;
 	 dc:title "Ontología de Turismo Inteligente y Recomendaciones (OTIR).";
-	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 	 prov:specializationOf <http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2>;
-	 prov:wasGeneratedAt "28/04/2025";
 .
-:agent0 a prov:Agent; foaf:name "José Andrés Filgueira Sánchez".

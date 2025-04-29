@@ -1,4 +1,5 @@
 <http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/andres_simuladores/ontologies/2025/3/RepresentacionDelConocimientoPEC_2> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://andrazer.github.io/RepresentacionDelConocimientoPEC_2-ontology/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 # 
 # 
 # #################################################################
